@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Book>
+
+@{
+    ViewData["Title"] = "Library Dashboard";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Library Dashboard</h2>
+    <div class="table-responsive mt-4">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Year Published</th>
+                    <th scope="col">Alloted</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <th scope="row">@book.BookID</th>
+                        <td>@book.Title</td>
+                        <td>@book.Author</td>
+                        <td>@book.Genre</td>
+                        <td>@book.YearPublished</td>
+                        <td>
+                            @if (book.IsAlloted)
+                            {
+                                <span class="badge bg-success">Alloted</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">Not Alloted</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

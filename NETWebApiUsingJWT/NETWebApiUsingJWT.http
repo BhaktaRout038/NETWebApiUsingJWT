@@ -1,0 +1,6 @@
+@NETWebApiUsingJWT_HostAddress = http://localhost:5085
+
+GET {{NETWebApiUsingJWT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
