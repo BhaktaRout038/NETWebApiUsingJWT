@@ -8,7 +8,7 @@ namespace NETWebApiUsingJWT.Services
         {
             if (userBE != null)
             {
-                if (userBE.Password == "abc@123" & userBE.UserID == "AWS123")
+                if (userBE.UserID == "alpha" & userBE.Password == "alpha@123")
                 {
                     return new UserDetails
                     {
